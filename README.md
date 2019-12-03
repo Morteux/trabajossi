@@ -13,6 +13,24 @@ Herramientas:
  
 # Instalar IPFS
 https://ipfs.io/
+
+### Primera forma
+Descargar el .exe de Drive
+Descomprimirlo
+Mover **ipfs.exe** a **%PATH%**.
+
+Para probar que funciona:
+```
+$ ipfs help
+USAGE:
+
+    ipfs - Global p2p merkle-dag filesystem.
+...
+```
+
+### Segunda forma
+Ejecutar el .exe de la aplicación de escritorio.
+
 # Instalar MetaMask
 https://metamask.io/
 # Instalar ReactJS
@@ -25,6 +43,15 @@ https://www.trufflesuite.com/
 https://www.trufflesuite.com/ganache
 
 
+
+
+
+
+
+
+
+
+FORMATO .md https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
 # Título
 ## Subtítulo
 
@@ -32,4 +59,11 @@ https://www.trufflesuite.com/ganache
 
 ![alt text](url.png)
 
+**negrita**
+
 *cursiva*
+
+task list
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
