@@ -1,20 +1,20 @@
 # Guía de instalación del proyecto con Blockchain Ethereum
 
-## Paso 1: Instalar las herramientas
+## Instalar las herramientas
  
-### Instalar MetaMask
+### 1. Instalar MetaMask
 https://metamask.io/
  - Instalar MetaMask desde la Chrome Web Store (https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=es)
 
-### Instalar Truffle
+### 2. Instalar Truffle
 https://www.trufflesuite.com/
 
-##### Requisitos previos
+##### 2.1. Requisitos previos
  - Instalar Git. https://git-scm.com/downloads
  - Instalar Node LTS. https://nodejs.org/en/
    - Selecciona la casilla para instalar automáticamente Chocolatey (**¡TARDA MUCHO!**)
    
-##### Para instalar Truffle
+##### 2.2. Para instalar Truffle
  - Ejecutar el comando `npm install -g truffle`. Incluye:
    - Truffle
    - Solidity
@@ -22,25 +22,25 @@ https://www.trufflesuite.com/
    - Web3.js (https://web3js.readthedocs.io/en/v1.2.4/)
  - Para comprobar que se ha instalado todo con éxito ejecuta `truffle version`
 
-### Instalar Ganache
+### 3. Instalar Ganache
 https://www.trufflesuite.com/ganache
  - Instalar Ganache. https://www.trufflesuite.com/ganache
  
- ### Instalar IPFS
+### 4. Instalar IPFS
 https://ipfs.io/
 
-##### Requisitos previos
+##### 4.1. Requisitos previos
  - Instalar Truffle
  
-##### Para instalar Truffle
+##### 4.2. Para instalar Truffle
  - Abrir una consola de comandos como administrador (PROMPT: C:\WINDOWS\system32>)
  - Ejecutar el comando `choco install ipfs-desktop`
  - Ejecutar IPFS Desktop por primera vez y darle permiso de acceso al firewall de Windows
 
-### Instalar ReactJS
+### 5. Instalar ReactJS
 https://es.reactjs.org/
 
-### Instalar Mendeley
+### 6. Instalar Mendeley
 https://www.mendeley.com/
  - Registrarse en Mendeley
  - Instalar Mendeley. https://www.mendeley.com/download-desktop/
