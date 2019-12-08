@@ -26,7 +26,7 @@
 ### 4. Instalar [IPFS](https://ipfs.io/)
 
 ##### 4.1. Requisitos previos
- - Instalar Truffle (2.).
+ - Instalar Truffle en el [punto 2](https://github.com/Morteux/trabajossi/blob/master/README.md#2-instalar-truffle).
  
 ##### 4.2. Para instalar Truffle
  - Abrir una consola de comandos como administrador (El prompt debe quedar así `C:\WINDOWS\system32>`).
