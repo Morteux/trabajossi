@@ -33,15 +33,33 @@ Ejecutar el .exe de la aplicación de escritorio.
 
 # Instalar MetaMask
 https://metamask.io/
+ - Instalar MetaMask desde la Chrome Web Store (https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=es)
 # Instalar ReactJS
 https://es.reactjs.org/
-# Instalar Web3.js
-https://web3js.readthedocs.io/en/v1.2.4/
 # Instalar Truffle
 https://www.trufflesuite.com/
+
+### Requisitos previos
+ - Instalar Git. https://git-scm.com/downloads
+ - Instalar Node LTS. https://nodejs.org/en/
+   - Selecciona la casilla para instalar automáticamente Chocolatey (**¡TARDA MUCHO!**)
+   
+### Para instalar Truffle
+ - Ejecutar el comando `npm install -g truffle`. Incluye:
+   - Truffle
+   - Solidity
+   - Node
+   - Web3.js (https://web3js.readthedocs.io/en/v1.2.4/)
+ - Para comprobar que se ha instalado todo con éxito ejecuta `truffle version`
+
 # Instalar Ganache
 https://www.trufflesuite.com/ganache
-
+ - Instalar Ganache. https://www.trufflesuite.com/ganache
+ 
+# Instalar Mendeley
+https://www.mendeley.com/
+ - Registrarse en Mendeley
+ - Instalar Mendeley. https://www.mendeley.com/download-desktop/
 
 
 
