@@ -2,89 +2,89 @@
   {
     "id": 0,
     "name": "Frieda",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Lisco, Alabama"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "Scottish Terrier",
+    "uploader": "Lisco, Alabama"
   },
   {
     "id": 1,
     "name": "Gina",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Tooleville, West Virginia"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "Scottish Terrier",
+    "uploader": "Tooleville, West Virginia"
   },
   {
     "id": 2,
     "name": "Collins",
-    "picture": "images/file.png",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Freeburn, Idaho"
+    "ext": "images/file.png",
+    "size": 2,
+    "downloads": "French Bulldog",
+    "uploader": "Freeburn, Idaho"
   },
   {
     "id": 3,
     "name": "Melissa",
-    "picture": "images/file.png",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Camas, Pennsylvania"
+    "ext": "images/file.png",
+    "size": 2,
+    "downloads": "Boxer",
+    "uploader": "Camas, Pennsylvania"
   },
   {
     "id": 4,
     "name": "Jeanine",
-    "picture": "images/file.png",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Gerber, South Dakota"
+    "ext": "images/file.png",
+    "size": 2,
+    "downloads": "French Bulldog",
+    "uploader": "Gerber, South Dakota"
   },
   {
     "id": 5,
     "name": "Elvia",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "French Bulldog",
-    "location": "Innsbrook, Illinois"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "French Bulldog",
+    "uploader": "Innsbrook, Illinois"
   },
   {
     "id": 6,
     "name": "Latisha",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "Golden Retriever",
-    "location": "Soudan, Louisiana"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "Golden Retriever",
+    "uploader": "Soudan, Louisiana"
   },
   {
     "id": 7,
     "name": "Coleman",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "Golden Retriever",
-    "location": "Jacksonwald, Palau"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "Golden Retriever",
+    "uploader": "Jacksonwald, Palau"
   },
   {
     "id": 8,
     "name": "Nichole",
-    "picture": "images/file.png",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Honolulu, Hawaii"
+    "ext": "images/file.png",
+    "size": 2,
+    "downloads": "French Bulldog",
+    "uploader": "Honolulu, Hawaii"
   },
   {
     "id": 9,
     "name": "Fran",
-    "picture": "images/file.png",
-    "age": 3,
-    "breed": "Boxer",
-    "location": "Matheny, Utah"
+    "ext": "images/file.png",
+    "size": 3,
+    "downloads": "Boxer",
+    "uploader": "Matheny, Utah"
   },
   {
     "id": 10,
     "name": "Leonor",
-    "picture": "images/file.png",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Tyhee, Indiana"
+    "ext": "images/file.png",
+    "size": 2,
+    "downloads": "Boxer",
+    "uploader": "Tyhee, Indiana"
   }
 ]
