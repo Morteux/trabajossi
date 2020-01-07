@@ -70,13 +70,13 @@ App = {
   },
 
   markAdopted: function(adopters, account) {
-    var adoptionInstance;
+    var AdoptionInstance;
 
     App.contracts.Adoption.deployed()
       .then(function(instance) {
-        adoptionInstance = instance;
+        AdoptionInstance = instance;
 
-        return adoptionInstance.getAdopters.call();
+        return AdoptionInstance.getAdopters.call();
       })
       .then(function(adopters) {
         for (i = 0; i < adopters.length; i++) {
@@ -95,7 +95,7 @@ App = {
 
     var petId = parseInt($(event.target).data("id"));
 
-    var adoptionInstance;
+    var AdoptionInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
@@ -106,10 +106,10 @@ App = {
 
       App.contracts.Adoption.deployed()
         .then(function(instance) {
-          adoptionInstance = instance;
+          AdoptionInstance = instance;
 
           // Execute adopt as a transaction by sending account
-          return adoptionInstance.adopt(petId, { from: account });
+          return AdoptionInstance.adopt(petId, { from: account });
         })
         .then(function(result) {
           return App.markAdopted();

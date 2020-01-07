@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Trabajo SSI</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,19 +21,35 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">Trabajo SSI <br> Descargas con control de derechos de autor</h1>
-          <hr/>
-          <br/>
+          <h1 class="text-center">
+            Trabajo SSI <br />
+            Descargas con control de derechos de autor
+          </h1>
+          <hr />
+          <br />
         </div>
       </div>
-
+      <!--
       <h4>Show a file-select field which allows only one file to be chosen:</h3>
-      <form action="/action_page.php">
+      <form action="/save_file.php">
         Select a file: <input type="file" name="myFile"><br><br>
         <input type="submit">
       </form>
-      <hr/>
-      <br/>
+    -->
+      <form name="form" method="POST" action="/files/save_file.php" enctype="multipart/form-data" >
+        <input type="file" name="my_file" /><br />
+        <input type="submit" name="submit" value="Subir"/>
+        </form>
+      <!--
+      <form enctype="multipart/form-data" action="save_file.php" method="POST">
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        Send this file: <input name="userfile" type="file" />
+        <input type="submit" value="Send File" />
+      </form>
+      -->
+
+      <hr />
+      <br />
 
       <div id="petsRow" class="row">
         <!-- PETS LOAD HERE -->
@@ -47,12 +63,23 @@
             <h3 class="panel-title">Scrappy</h3>
           </div>
           <div class="panel-body">
-            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 25%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
-            <br/><br/>
-            <strong>Tipo</strong>: <span class="pet-breed">Golden Retriever</span><br/>
-            <strong>Descargas</strong>: <span class="pet-age">3</span><br/>
-            <strong>Fecha de subida</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
-            <button class="btn btn-default btn-adopt" type="button" data-id="0">Descargar</button>
+            <img
+              alt="140x140"
+              data-src="holder.js/140x140"
+              class="img-rounded img-center"
+              style="width: 25%;"
+              src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg"
+              data-holder-rendered="true"
+            />
+            <br /><br />
+            <strong>Tipo</strong>:
+            <span class="pet-breed">Golden Retriever</span><br />
+            <strong>Descargas</strong>: <span class="pet-age">3</span><br />
+            <strong>Fecha de subida</strong>:
+            <span class="pet-location">Warren, MI</span><br /><br />
+            <button class="btn btn-default btn-adopt" type="button" data-id="0">
+              Descargar
+            </button>
             <a href="/files/prueba.txt" download="Prueba.txt">Descargar</a>
           </div>
         </div>
