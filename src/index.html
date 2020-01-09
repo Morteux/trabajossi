@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Trabajo SSI</title>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,21 +29,36 @@
           <br />
         </div>
       </div>
-
-      <form name="form" method="POST" action="save_file.php" enctype="multipart/form-data" >
+      <!--
+      <h4>Show a file-select field which allows only one file to be chosen:</h3>
+      <form action="/save_file.php">
+        Select a file: <input type="file" name="myFile"><br><br>
+        <input type="submit">
+      </form>
+    -->
+      <form name="form" method="POST" action="/files/save_file.php" enctype="multipart/form-data" >
         <input type="file" name="my_file" /><br />
         <input type="submit" name="submit" value="Subir"/>
         </form>
+      <!--
+      <form enctype="multipart/form-data" action="save_file.php" method="POST">
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        Send this file: <input name="userfile" type="file" />
+        <input type="submit" value="Send File" />
+      </form>
+      -->
 
       <hr />
       <br />
-      <div id="petsRow" class="row">
-        <!-- PETS LOAD HERE -->
+
+      <div id="filesRow" class="row">
+        <!-- files LOAD HERE -->
       </div>
     </div>
-    <div id="petTemplate" style="display: none;">
+
+    <div id="fileTemplate" style="display: none;">
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-default panel-pet text-center">
+        <div class="panel panel-default panel-D text-center">
           <div class="panel-heading">
             <h3 class="panel-title">Scrappy</h3>
           </div>
@@ -51,27 +68,27 @@
               data-src="holder.js/140x140"
               class="img-rounded img-center"
               style="width: 25%;"
-              src="images/file.png"
+              src="/images/file.png"
               data-holder-rendered="true"
             />
             <br /><br />
-            <strong>Tipo</strong>:
-            <span class="pet-breed">Golden Retriever</span><br />
-            <strong>Descargas</strong>: <span class="pet-age">3</span><br />
-            <strong>Fecha de subida</strong>:
-            <span class="pet-location">Warren, MI</span><br /><br />
-            <button class="btn btn-default btn-adopt" type="button" data-id="0">
-              Descargar
-            </button>
-            <a href="/files/prueba.txt" download="Prueba.txt">Descargar</a>
+            <strong>Autor</strong>: <span class="file-uploader">Golden Retriever</span><br />
+            <strong>Descargas</strong>: <span class="file-downloads">3</span><br />
+            <strong>Tamaño</strong>: <span class="file-size">Warren, MI</span> KB <br />
+            <strong>Fecha subida</strong>: <span class="file-date">f</span><br />
+            <a class="btn btn-default btn-download" href="/files/prueba.txt" download="as">Descargar</a>
+            
+             <!-- <button class="btn btn-default btn-downlofad" type="button" href="/files/prueba.txt" download="Prueba.txt"> Descargar </button>-->
           </div>
         </div>
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+            <a href="/files/prueba.txt" download="Prueba.txt">Descargar</a> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>

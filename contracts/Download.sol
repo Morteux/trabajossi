@@ -17,6 +17,7 @@ contract Download {
         uint size;          //Tamaño
         uint downloads;     //Número de descargas
         address uploader;   //Propietario
+        bytes32 source;     //donde se guarda
         uint date; //El tipo no se si es correcto    //Fecha de subida
     }
 
@@ -44,6 +45,19 @@ contract Download {
     function getFiles() public returns (File[] memory)
     {
         return files;
+    }
+    function setFiles(File[] memory newFiles) public
+    {
+        uint i = 0;
+        for (i = 0; i < files.length; i++) {
+            files[i].name = newFiles[i].name;
+            files[i].ext = newFiles[i].ext;
+            files[i].size = newFiles[i].size;
+            files[i].downloads = newFiles[i].downloads;
+            files[i].uploader = newFiles[i].uploader;
+            files[i].source = newFiles[i].source;
+            files[i].date = newFiles[i].date;
+        }
     }
 /*
     function plusDownLD(uint fileId) private {
