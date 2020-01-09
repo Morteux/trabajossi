@@ -1,0 +1,1889 @@
+{
+  "contractName": "Download",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "files",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes3",
+          "name": "ext",
+          "type": "bytes3"
+        },
+        {
+          "internalType": "uint256",
+          "name": "size",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "downloads",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "uploader",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "date",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fileId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFiles",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "name",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes3",
+              "name": "ext",
+              "type": "bytes3"
+            },
+            {
+              "internalType": "uint256",
+              "name": "size",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "downloads",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "uploader",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "date",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct Download.File[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fileId",
+          "type": "uint256"
+        }
+      ],
+      "name": "downLd",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fileId\",\"type\":\"uint256\"}],\"name\":\"downLd\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"files\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes3\",\"name\":\"ext\",\"type\":\"bytes3\"},{\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"downloads\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"uploader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"date\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fileId\",\"type\":\"uint256\"}],\"name\":\"getFiles\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes3\",\"name\":\"ext\",\"type\":\"bytes3\"},{\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"downloads\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"uploader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"date\",\"type\":\"bytes32\"}],\"internalType\":\"struct Download.File[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/truffle/ssi/trabajossi/contracts/Download.sol\":\"Download\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/truffle/ssi/trabajossi/contracts/Download.sol\":{\"keccak256\":\"0x2083afdd511de5ebbc53735c3fcc01feb789e7b106ffc8c268acb8d0730cff17\",\"urls\":[\"bzz-raw://e538e6c27627a6b8c7be12fd123cb215ed86ac6e3d2e5b20979584b7859f7dd2\",\"dweb:/ipfs/QmSABNpZw7mmWG1KN5pCnPPYLE9PS7SXmbcAzpj8SHwu6L\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600060015534801561001557600080fd5b5061062f806100256000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806312506f4d14610046578063442b996e14610076578063f4c714b4146100a6575b600080fd5b610060600480360361005b91908101906102fa565b6100db565b60405161006d919061048c565b60405180910390f35b610090600480360361008b91908101906102fa565b610211565b60405161009d919061050f565b60405180910390f35b6100c060048036036100bb91908101906102fa565b61023e565b6040516100d2969594939291906104ae565b60405180910390f35b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561020657838290600052602060002090600602016040518060c0016040529081600082015481526020016001820160009054906101000a900460e81b7cffffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167cffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200160028201548152602001600382015481526020016004820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001600582015481525050815260200190600101906100ff565b505050509050919050565b6000808210158015610224575060015482105b61022d57600080fd5b610236826102b4565b819050919050565b6000818154811061024b57fe5b90600052602060002090600602016000915090508060000154908060010160009054906101000a900460e81b908060020154908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050154905086565b600081815481106102c157fe5b90600052602060002090600602016003016000815480929190600101919050555050565b6000813590506102f4816105d5565b92915050565b60006020828403121561030c57600080fd5b600061031a848285016102e5565b91505092915050565b600061032f83836103f3565b60c08301905092915050565b61034481610563565b82525050565b61035381610563565b82525050565b60006103648261053a565b61036e8185610552565b93506103798361052a565b8060005b838110156103aa5781516103918882610323565b975061039c83610545565b92505060018101905061037d565b5085935050505092915050565b6103c0816105a1565b82525050565b6103cf816105a1565b82525050565b6103de81610575565b82525050565b6103ed81610575565b82525050565b60c08201600082015161040960008501826103b7565b50602082015161041c60208501826103d5565b50604082015161042f604085018261046e565b506060820151610442606085018261046e565b506080820151610455608085018261033b565b5060a082015161046860a08501826103b7565b50505050565b610477816105cb565b82525050565b610486816105cb565b82525050565b600060208201905081810360008301526104a68184610359565b905092915050565b600060c0820190506104c360008301896103c6565b6104d060208301886103e4565b6104dd604083018761047d565b6104ea606083018661047d565b6104f7608083018561034a565b61050460a08301846103c6565b979650505050505050565b6000602082019050610524600083018461047d565b92915050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600061056e826105ab565b9050919050565b60007fffffff000000000000000000000000000000000000000000000000000000000082169050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6105de816105cb565b81146105e957600080fd5b5056fea365627a7a7231582024ce2e18c62ede9cd30a50c48540ec7704683b59e0ac0ceb7a236627d926f33e6c6578706572696d656e74616cf564736f6c634300050c0040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806312506f4d14610046578063442b996e14610076578063f4c714b4146100a6575b600080fd5b610060600480360361005b91908101906102fa565b6100db565b60405161006d919061048c565b60405180910390f35b610090600480360361008b91908101906102fa565b610211565b60405161009d919061050f565b60405180910390f35b6100c060048036036100bb91908101906102fa565b61023e565b6040516100d2969594939291906104ae565b60405180910390f35b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561020657838290600052602060002090600602016040518060c0016040529081600082015481526020016001820160009054906101000a900460e81b7cffffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167cffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200160028201548152602001600382015481526020016004820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001600582015481525050815260200190600101906100ff565b505050509050919050565b6000808210158015610224575060015482105b61022d57600080fd5b610236826102b4565b819050919050565b6000818154811061024b57fe5b90600052602060002090600602016000915090508060000154908060010160009054906101000a900460e81b908060020154908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050154905086565b600081815481106102c157fe5b90600052602060002090600602016003016000815480929190600101919050555050565b6000813590506102f4816105d5565b92915050565b60006020828403121561030c57600080fd5b600061031a848285016102e5565b91505092915050565b600061032f83836103f3565b60c08301905092915050565b61034481610563565b82525050565b61035381610563565b82525050565b60006103648261053a565b61036e8185610552565b93506103798361052a565b8060005b838110156103aa5781516103918882610323565b975061039c83610545565b92505060018101905061037d565b5085935050505092915050565b6103c0816105a1565b82525050565b6103cf816105a1565b82525050565b6103de81610575565b82525050565b6103ed81610575565b82525050565b60c08201600082015161040960008501826103b7565b50602082015161041c60208501826103d5565b50604082015161042f604085018261046e565b506060820151610442606085018261046e565b506080820151610455608085018261033b565b5060a082015161046860a08501826103b7565b50505050565b610477816105cb565b82525050565b610486816105cb565b82525050565b600060208201905081810360008301526104a68184610359565b905092915050565b600060c0820190506104c360008301896103c6565b6104d060208301886103e4565b6104dd604083018761047d565b6104ea606083018661047d565b6104f7608083018561034a565b61050460a08301846103c6565b979650505050505050565b6000602082019050610524600083018461047d565b92915050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600061056e826105ab565b9050919050565b60007fffffff000000000000000000000000000000000000000000000000000000000082169050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6105de816105cb565b81146105e957600080fd5b5056fea365627a7a7231582024ce2e18c62ede9cd30a50c48540ec7704683b59e0ac0ceb7a236627d926f33e6c6578706572696d656e74616cf564736f6c634300050c0040",
+  "sourceMap": "115:810:1:-;;;497:1;485:13;;115:810;8:9:-1;5:2;;;30:1;27;20:12;5:2;115:810:1;;;;;;;",
+  "deployedSourceMap": "115:810:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;115:810:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;562:98;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;762:160;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;459:19;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;562:98;609:13;647:5;640:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;562:98;;;:::o;762:160::-;807:4;842:1;832:6;:11;;:28;;;;;856:4;;847:6;:13;832:28;824:37;;;;;;872:18;883:6;872:10;:18::i;:::-;908:6;901:13;;762:160;;;:::o;459:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;668:86::-;720:5;726:6;720:13;;;;;;;;;;;;;;;;;;:23;;;:26;;;;;;;;;;;;;668:86;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;142:241;;246:2;234:9;225:7;221:23;217:32;214:2;;;262:1;259;252:12;214:2;297:1;314:53;359:7;350:6;339:9;335:22;314:53;;;304:63;;276:97;208:175;;;;;391:245;;512:84;592:3;584:6;512:84;;;625:4;620:3;616:14;602:28;;505:131;;;;;644:103;717:24;735:5;717:24;;;712:3;705:37;699:48;;;754:113;837:24;855:5;837:24;;;832:3;825:37;819:48;;;931:826;;1110:71;1175:5;1110:71;;;1194:103;1290:6;1285:3;1194:103;;;1187:110;;1318:73;1385:5;1318:73;;;1411:7;1439:1;1424:311;1449:6;1446:1;1443:13;1424:311;;;1516:6;1510:13;1537:97;1630:3;1615:13;1537:97;;;1530:104;;1651:77;1721:6;1651:77;;;1641:87;;1481:254;1471:1;1468;1464:9;1459:14;;1424:311;;;1428:14;1748:3;1741:10;;1089:668;;;;;;;;1765:103;1838:24;1856:5;1838:24;;;1833:3;1826:37;1820:48;;;1875:113;1958:24;1976:5;1958:24;;;1953:3;1946:37;1940:48;;;1995:100;2066:23;2083:5;2066:23;;;2061:3;2054:36;2048:47;;;2102:110;2183:23;2200:5;2183:23;;;2178:3;2171:36;2165:47;;;2270:1074;2391:4;2386:3;2382:14;2474:3;2467:5;2463:15;2457:22;2485:62;2542:3;2537;2533:13;2519:12;2485:62;;;2411:142;2625:4;2618:5;2614:16;2608:23;2637:61;2692:4;2687:3;2683:14;2669:12;2637:61;;;2563:141;2777:4;2770:5;2766:16;2760:23;2789:63;2846:4;2841:3;2837:14;2823:12;2789:63;;;2714:144;2936:4;2929:5;2925:16;2919:23;2948:63;3005:4;3000:3;2996:14;2982:12;2948:63;;;2868:149;3094:4;3087:5;3083:16;3077:23;3106:63;3163:4;3158:3;3154:14;3140:12;3106:63;;;3027:148;3248:4;3241:5;3237:16;3231:23;3260:63;3317:4;3312:3;3308:14;3294:12;3260:63;;;3185:144;2364:980;;;;3351:103;3424:24;3442:5;3424:24;;;3419:3;3412:37;3406:48;;;3461:113;3544:24;3562:5;3544:24;;;3539:3;3532:37;3526:48;;;3581:429;;3783:2;3772:9;3768:18;3760:26;;3833:9;3827:4;3823:20;3819:1;3808:9;3804:17;3797:47;3858:142;3995:4;3986:6;3858:142;;;3850:150;;3754:256;;;;;4017:767;;4273:3;4262:9;4258:19;4250:27;;4288:71;4356:1;4345:9;4341:17;4332:6;4288:71;;;4370:70;4436:2;4425:9;4421:18;4412:6;4370:70;;;4451:72;4519:2;4508:9;4504:18;4495:6;4451:72;;;4534;4602:2;4591:9;4587:18;4578:6;4534:72;;;4617:73;4685:3;4674:9;4670:19;4661:6;4617:73;;;4701;4769:3;4758:9;4754:19;4745:6;4701:73;;;4244:540;;;;;;;;;;4791:213;;4909:2;4898:9;4894:18;4886:26;;4923:71;4991:1;4980:9;4976:17;4967:6;4923:71;;;4880:124;;;;;5011:168;;5114:3;5106:11;;5152:4;5147:3;5143:14;5135:22;;5100:79;;;;5186:154;;5312:5;5306:12;5296:22;;5277:63;;;;5347:125;;5462:4;5457:3;5453:14;5445:22;;5439:33;;;;5480:195;;5627:6;5622:3;5615:19;5664:4;5659:3;5655:14;5640:29;;5608:67;;;;;5683:91;;5745:24;5763:5;5745:24;;;5734:35;;5728:46;;;;5781:144;;5853:66;5846:5;5842:78;5831:89;;5825:100;;;;5932:72;;5994:5;5983:16;;5977:27;;;;6011:121;;6084:42;6077:5;6073:54;6062:65;;6056:76;;;;6139:72;;6201:5;6190:16;;6184:27;;;;6218:117;6287:24;6305:5;6287:24;;;6280:5;6277:35;6267:2;;6326:1;6323;6316:12;6267:2;6261:74;",
+  "source": "pragma solidity ^0.5.0;\r\npragma experimental ABIEncoderV2;   //Esperimental es necesario para \"File memory\" (?)\r\n\r\ncontract Download {\r\n\r\n    struct File {\r\n        bytes32 name;       //Nombre\r\n        bytes3 ext;         //Extensión\r\n        uint size;          //Tamaño\r\n        uint downloads;     //Número de descargas\r\n        address uploader;   //Propietario\r\n        bytes32 date; //El tipo no se si es correcto    //Fecha de subida\r\n    }\r\n\r\n    File[] public files;\r\n    uint size = 0;\r\n\r\n    // Devuelve la información de todos los archivos\r\n    function getFiles(uint fileId) public returns (File[] memory)\r\n    {\r\n        return files;\r\n    }\r\n\r\n    function plusDownLD(uint fileId) private {\r\n        files[fileId].downloads ++;\r\n    }\r\n\r\n    function downLd(uint fileId) public returns (uint) {\r\n        require(fileId >= 0 && fileId < size);\r\n        plusDownLD(fileId);\r\n        return fileId;\r\n    }\r\n}",
+  "sourcePath": "C:/truffle/ssi/trabajossi/contracts/Download.sol",
+  "ast": {
+    "absolutePath": "/C/truffle/ssi/trabajossi/contracts/Download.sol",
+    "exportedSymbols": {
+      "Download": [
+        179
+      ]
+    },
+    "id": 180,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 111,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "id": 112,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 179,
+        "linearizedBaseContracts": [
+          179
+        ],
+        "name": "Download",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Download.File",
+            "id": 125,
+            "members": [
+              {
+                "constant": false,
+                "id": 114,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "165:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 113,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 116,
+                "name": "ext",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "203:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes3",
+                  "typeString": "bytes3"
+                },
+                "typeName": {
+                  "id": 115,
+                  "name": "bytes3",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 118,
+                "name": "size",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "245:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 117,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 120,
+                "name": "downloads",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "284:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 119,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "284:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 122,
+                "name": "uploader",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "336:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 121,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 124,
+                "name": "date",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "379:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 123,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "379:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "File",
+            "nodeType": "StructDefinition",
+            "scope": 179,
+            "src": "142:309:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 128,
+            "name": "files",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "459:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+              "typeString": "struct Download.File[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 126,
+                "name": "File",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 125,
+                "src": "459:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_File_$125_storage_ptr",
+                  "typeString": "struct Download.File"
+                }
+              },
+              "id": 127,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "459:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage_ptr",
+                "typeString": "struct Download.File[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 131,
+            "name": "size",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "485:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 129,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "485:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 130,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "497:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 141,
+              "nodeType": "Block",
+              "src": "629:31:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 139,
+                    "name": "files",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 128,
+                    "src": "647:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+                      "typeString": "struct Download.File storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 138,
+                  "id": 140,
+                  "nodeType": "Return",
+                  "src": "640:12:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 142,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFiles",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 142,
+                  "src": "580:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "580:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "579:13:1"
+            },
+            "returnParameters": {
+              "id": 138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 137,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 142,
+                  "src": "609:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_File_$125_memory_$dyn_memory_ptr",
+                    "typeString": "struct Download.File[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 135,
+                      "name": "File",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 125,
+                      "src": "609:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_File_$125_storage_ptr",
+                        "typeString": "struct Download.File"
+                      }
+                    },
+                    "id": 136,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "609:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage_ptr",
+                      "typeString": "struct Download.File[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:15:1"
+            },
+            "scope": 179,
+            "src": "562:98:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 153,
+              "nodeType": "Block",
+              "src": "709:45:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 151,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "720:26:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 147,
+                          "name": "files",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 128,
+                          "src": "720:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+                            "typeString": "struct Download.File storage ref[] storage ref"
+                          }
+                        },
+                        "id": 149,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 148,
+                          "name": "fileId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 144,
+                          "src": "726:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "720:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_File_$125_storage",
+                          "typeString": "struct Download.File storage ref"
+                        }
+                      },
+                      "id": 150,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "downloads",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 120,
+                      "src": "720:23:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 152,
+                  "nodeType": "ExpressionStatement",
+                  "src": "720:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 154,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "plusDownLD",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 145,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 144,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 154,
+                  "src": "688:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 143,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "688:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "687:13:1"
+            },
+            "returnParameters": {
+              "id": 146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "709:0:1"
+            },
+            "scope": 179,
+            "src": "668:86:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 177,
+              "nodeType": "Block",
+              "src": "813:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 168,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 164,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 162,
+                            "name": "fileId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 156,
+                            "src": "832:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">=",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 163,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "842:1:1",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          "src": "832:11:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "&&",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 167,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 165,
+                            "name": "fileId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 156,
+                            "src": "847:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 166,
+                            "name": "size",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 131,
+                            "src": "856:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "847:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "832:28:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 161,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        254,
+                        255
+                      ],
+                      "referencedDeclaration": 254,
+                      "src": "824:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "824:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "824:37:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 172,
+                        "name": "fileId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 156,
+                        "src": "883:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 171,
+                      "name": "plusDownLD",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "872:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 173,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "872:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 174,
+                  "nodeType": "ExpressionStatement",
+                  "src": "872:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 175,
+                    "name": "fileId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 156,
+                    "src": "908:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 160,
+                  "id": 176,
+                  "nodeType": "Return",
+                  "src": "901:13:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 178,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "downLd",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 157,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 156,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "778:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 155,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "778:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "777:13:1"
+            },
+            "returnParameters": {
+              "id": 160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 159,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "807:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 158,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "807:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "806:6:1"
+            },
+            "scope": 179,
+            "src": "762:160:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 180,
+        "src": "115:810:1"
+      }
+    ],
+    "src": "0:925:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/truffle/ssi/trabajossi/contracts/Download.sol",
+    "exportedSymbols": {
+      "Download": [
+        179
+      ]
+    },
+    "id": 180,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 111,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "id": 112,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 179,
+        "linearizedBaseContracts": [
+          179
+        ],
+        "name": "Download",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Download.File",
+            "id": 125,
+            "members": [
+              {
+                "constant": false,
+                "id": 114,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "165:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 113,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 116,
+                "name": "ext",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "203:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes3",
+                  "typeString": "bytes3"
+                },
+                "typeName": {
+                  "id": 115,
+                  "name": "bytes3",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 118,
+                "name": "size",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "245:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 117,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 120,
+                "name": "downloads",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "284:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 119,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "284:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 122,
+                "name": "uploader",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "336:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 121,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 124,
+                "name": "date",
+                "nodeType": "VariableDeclaration",
+                "scope": 125,
+                "src": "379:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 123,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "379:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "File",
+            "nodeType": "StructDefinition",
+            "scope": 179,
+            "src": "142:309:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 128,
+            "name": "files",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "459:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+              "typeString": "struct Download.File[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 126,
+                "name": "File",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 125,
+                "src": "459:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_File_$125_storage_ptr",
+                  "typeString": "struct Download.File"
+                }
+              },
+              "id": 127,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "459:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage_ptr",
+                "typeString": "struct Download.File[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 131,
+            "name": "size",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "485:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 129,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "485:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 130,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "497:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 141,
+              "nodeType": "Block",
+              "src": "629:31:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 139,
+                    "name": "files",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 128,
+                    "src": "647:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+                      "typeString": "struct Download.File storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 138,
+                  "id": 140,
+                  "nodeType": "Return",
+                  "src": "640:12:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 142,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFiles",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 142,
+                  "src": "580:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "580:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "579:13:1"
+            },
+            "returnParameters": {
+              "id": 138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 137,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 142,
+                  "src": "609:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_File_$125_memory_$dyn_memory_ptr",
+                    "typeString": "struct Download.File[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 135,
+                      "name": "File",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 125,
+                      "src": "609:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_File_$125_storage_ptr",
+                        "typeString": "struct Download.File"
+                      }
+                    },
+                    "id": 136,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "609:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage_ptr",
+                      "typeString": "struct Download.File[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:15:1"
+            },
+            "scope": 179,
+            "src": "562:98:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 153,
+              "nodeType": "Block",
+              "src": "709:45:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 151,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "720:26:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 147,
+                          "name": "files",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 128,
+                          "src": "720:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_File_$125_storage_$dyn_storage",
+                            "typeString": "struct Download.File storage ref[] storage ref"
+                          }
+                        },
+                        "id": 149,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 148,
+                          "name": "fileId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 144,
+                          "src": "726:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "720:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_File_$125_storage",
+                          "typeString": "struct Download.File storage ref"
+                        }
+                      },
+                      "id": 150,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "downloads",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 120,
+                      "src": "720:23:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 152,
+                  "nodeType": "ExpressionStatement",
+                  "src": "720:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 154,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "plusDownLD",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 145,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 144,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 154,
+                  "src": "688:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 143,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "688:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "687:13:1"
+            },
+            "returnParameters": {
+              "id": 146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "709:0:1"
+            },
+            "scope": 179,
+            "src": "668:86:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 177,
+              "nodeType": "Block",
+              "src": "813:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 168,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 164,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 162,
+                            "name": "fileId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 156,
+                            "src": "832:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">=",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 163,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "842:1:1",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          "src": "832:11:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "&&",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 167,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 165,
+                            "name": "fileId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 156,
+                            "src": "847:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 166,
+                            "name": "size",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 131,
+                            "src": "856:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "847:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "832:28:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 161,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        254,
+                        255
+                      ],
+                      "referencedDeclaration": 254,
+                      "src": "824:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "824:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "824:37:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 172,
+                        "name": "fileId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 156,
+                        "src": "883:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 171,
+                      "name": "plusDownLD",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "872:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 173,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "872:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 174,
+                  "nodeType": "ExpressionStatement",
+                  "src": "872:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 175,
+                    "name": "fileId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 156,
+                    "src": "908:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 160,
+                  "id": 176,
+                  "nodeType": "Return",
+                  "src": "901:13:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 178,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "downLd",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 157,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 156,
+                  "name": "fileId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "778:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 155,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "778:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "777:13:1"
+            },
+            "returnParameters": {
+              "id": 160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 159,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "807:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 158,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "807:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "806:6:1"
+            },
+            "scope": 179,
+            "src": "762:160:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 180,
+        "src": "115:810:1"
+      }
+    ],
+    "src": "0:925:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.19",
+  "updatedAt": "2020-01-09T11:00:15.742Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
