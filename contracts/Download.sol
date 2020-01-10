@@ -46,6 +46,7 @@ contract Download {
     {
         return files;
     }
+    
     function setFiles(File[] memory newFiles) public
     {
         uint i = 0;
