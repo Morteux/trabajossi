@@ -3,6 +3,7 @@ import "./App.css";
 import web3 from "./web3";
 import ipfs from "./ipfs";
 import storeMyValue from "./storeMyValue";
+
 class App extends Component {
   state = {
     ipfsHash: null,
@@ -11,6 +12,7 @@ class App extends Component {
     gasUsed: "",
     txReceipt: ""
   };
+
   captureFile = event => {
     event.stopPropagation();
     event.preventDefault();
@@ -19,12 +21,14 @@ class App extends Component {
     reader.readAsArrayBuffer(file);
     reader.onloadend = () => this.convertToBuffer(reader);
   };
+
   convertToBuffer = async reader => {
     //file is converted to a buffer for upload to IPFS
     const buffer = await Buffer.from(reader.result);
     //set this buffer -using es6 syntax
     this.setState({ buffer });
   };
+
   onSubmit = async event => {
     event.preventDefault();
     console.log("web3 value is ", web3.eth.getAccounts());
@@ -46,11 +50,12 @@ class App extends Component {
       );
     });
   };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1> IPFS Dapp</h1>
+          <h1> Trabajo SSI - IPFS Dapp</h1>
         </header>
         <hr />
         <h3> Choose file to send to IPFS </h3>
@@ -63,7 +68,7 @@ class App extends Component {
           <thead>
             <tr>
               <th>Sl No</th>
-              <th>Values</th>
+              <th>     Values</th>
             </tr>
           </thead>
           <tbody>
@@ -85,4 +90,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

@@ -22,7 +22,17 @@
 
 ### 3. Instalar [Ganache](https://www.trufflesuite.com/ganache)
  - Instalar Ganache. https://www.trufflesuite.com/ganache
- 
+
+### 4. Instalar [IPFS](https://ipfs.io/)
+
+ - Instalar IPFS. https://www.trufflesuite.com/ganache
+ - `npm install ipfs`
+ - `npm install ipfs-http-client`
+
+
+
+
+
 ### 4. Instalar [IPFS](https://ipfs.io/)
 
 ##### 4.1. Requisitos previos
