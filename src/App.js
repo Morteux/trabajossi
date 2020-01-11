@@ -6,6 +6,9 @@ import storeMyValue from "./storeMyValue";
 
 class App extends Component {
   state = {
+    nameExt: "",
+    size: "",
+    date: "",
     ipfsHash: null,
     buffer: "",
     transactionHash: "",
@@ -17,6 +20,14 @@ class App extends Component {
     event.stopPropagation();
     event.preventDefault();
     const file = event.target.files[0];
+
+    const nameExt = file.name;
+    this.setState({ nameExt });
+    const size = file.size / 1000;
+    this.setState({ size });
+    const date = String(new Date());
+    this.setState({ date });
+
     let reader = new window.FileReader();
     reader.readAsArrayBuffer(file);
     reader.onloadend = () => this.convertToBuffer(reader);
@@ -51,27 +62,82 @@ class App extends Component {
     });
   };
 
+  ///////////////////////////////////////////////////////////////////
+  /*
+  sendHash = event => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    const IPFSHash = document.getElementById("hash");
+
+    var file = ipfs.get(IPFSHash);
+
+    //reader.readAsArrayBuffer(file);
+    //reader.onloadend = () => this.convertToBuffer(reader);
+  };
+*/
+  /*
+  const fileHash = 'you hash of the file you want to get'
+
+  ipfs.files.get(fileHash, function (err, files) {
+      files.forEach((file) => {
+          console.log(file.path)
+          console.log("File content >> ",file.content.toString('utf8'))
+      })
+  })
+*/
+
+  ///////////////////////////////////////////////////////////////////
+
   render() {
     return (
       <div className="App">
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+        ></link>
         <header className="App-header">
           <h1> Trabajo SSI - IPFS Dapp</h1>
         </header>
         <hr />
         <h3> Choose file to send to IPFS </h3>
+
         <form onSubmit={this.onSubmit}>
-          <input type="file" onChange={this.captureFile} />
-          <button type="submit"> Send it </button>
+          <div class="input-group mb-3">
+            <input
+              class="form-control"
+              type="file"
+              onChange={this.captureFile}
+            />
+            <button type="submit" class="btn btn-info">
+              {" "}
+              Send it{" "}
+            </button>
+          </div>
         </form>
         <hr />
         <table>
           <thead>
             <tr>
-              <th>Sl No</th>
-              <th>     Values</th>
+              <th>File Properties</th>
+              <th>Values</th>
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>Name and extension</td>
+              <td>{this.state.nameExt}</td>
+            </tr>
+            <tr>
+              <td>Size (KB)</td>
+              <td>{this.state.size}</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>{this.state.date}</td>
+            </tr>
             <tr>
               <td>IPFS Hash # stored on Eth Contract</td>
               <td>{this.state.ipfsHash}</td>

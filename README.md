@@ -42,38 +42,11 @@
 ## Pasos para poner en funcionamiento la aplicación en modo desarrollador
 
  - Abrir Ganache:
-    - [x] Seleccionar *Quickstart*.
+    - Seleccionar *Quickstart*.
  - Abrir MetaMask:
-    - [ ] Si no tiene cuenta, selecciona *Import wallet* e introduce el mnemónico que proporciona Ganache y escoge la contraseña que prefiera.
-    - [x] Si tiene una cuenta, dirigete a *Configuración*->*Avanzado*->*Reiniciar cuenta*.
+    - Si no tiene cuenta, selecciona *Import wallet* e introduce el mnemónico que proporciona Ganache y escoge la contraseña que prefiera.
+    - Si tiene una cuenta, dirigete a *Configuración*->*Avanzado*->*Reiniciar cuenta*.
  - Abrir una consola de comandos en el directorio raiz del proyecto (**versión Windows**):
-    - [x] Ejecuta `truffle.cmd migrate`.
-
-
-
-
-
-
-
-
-
-
-
-FORMATO .md https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
-# Título
-## Subtítulo
-
-[Enlace](https://pages.github.com/)
-
-`código`
-
-![alt text](url.png)
-
-**negrita**
-
-*cursiva*
-
-task list
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+    - Ejecuta `truffle.cmd migrate`.
+ - Abrir IPFS Desktop
+ - [x] Listo
