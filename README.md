@@ -1,4 +1,4 @@
-# Guía de instalación del proyecto con Blockchain Ethereum
+# Guía de instalación y uso del proyecto con Blockchain Ethereum (Truffle, Ganache, MetaMask, IPFS, React.js)
 
 ## Instalar las herramientas
  
@@ -25,16 +25,6 @@
 
 ### 4. Instalar [IPFS](https://ipfs.io/)
 
- - Instalar IPFS. https://www.trufflesuite.com/ganache
- - `npm install ipfs`
- - `npm install ipfs-http-client`
-
-
-
-
-
-### 4. Instalar [IPFS](https://ipfs.io/)
-
 ##### 4.1. Requisitos previos
  - Instalar Truffle en el [punto 2](https://github.com/Morteux/trabajossi/blob/master/README.md#2-instalar-truffle).
  
@@ -43,11 +33,23 @@
  - Ejecutar el comando `choco install ipfs-desktop`.
  - Ejecutar IPFS Desktop por primera vez y darle permiso de acceso al firewall de Windows.
 
-### 5. Instalar [ReactJS](https://es.reactjs.org/)
+##### 4.3. Para instalar Truffle (alternativa)
+ - `npm install ipfs` o `npm install ipfs-http-client` (falta por probar)
 
-### 6. Instalar [Mendeley](https://www.mendeley.com/)
- - Registrarse en Mendeley.
- - Instalar Mendeley [aquí](https://www.mendeley.com/download-desktop/).
+### 5. Instalar [ReactJS](https://es.reactjs.org/)
+ - (?)
+
+## Pasos para poner en funcionamiento la aplicación en modo desarrollador
+
+ - Abrir Ganache:
+    - [x] Seleccionar *Quickstart*.
+ - Abrir MetaMask:
+    - [ ] Si no tiene cuenta, selecciona *Import wallet* e introduce el mnemónico que proporciona Ganache y escoge la contraseña que prefiera.
+    - [x] Si tiene una cuenta, dirigete a *Configuración*->*Avanzado*->*Reiniciar cuenta*.
+ - Abrir una consola de comandos en el directorio raiz del proyecto (**versión Windows**):
+    - [x] Ejecuta `truffle.cmd migrate`.
+
+
 
 
 
