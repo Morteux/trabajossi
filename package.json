@@ -1,21 +1,33 @@
 {
-  "name": "trabjossi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "truffle.js",
-  "directories": {
-    "test": "test"
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ipfs": "^0.40.0",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-scripts": "^3.3.0",
+    "web3": "1.2.2"
   },
   "scripts": {
-    "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.3.0"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "dependencies": {
-    "ipfs-http-client": "^40.2.1"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

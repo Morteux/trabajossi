@@ -1,5 +1,5 @@
-var Adoption = artifacts.require("Download");
+var SimpleStorage = artifacts.require("./SimpleStorage.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Download);
+  deployer.deploy(SimpleStorage);
 };
