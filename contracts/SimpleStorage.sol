@@ -17,33 +17,29 @@ Comparar dos strings a y b
 keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b)))
 */
 
-contract FileStorage {
+contract FileSignature {
 
   struct File{
     //Información de archivo
-    string name;      //Nombre
-    string ext;       //Extensión
-    uint size;        //Tamaño
-    uint downloads;   //Número de descargas
     address owner;    //Propietario
-    uint date; //El tipo no se si es correcto    //Fecha de subida
-
-    //Control de derechos de autor
+    string date;      //Fecha de subida
     string IPFSHash;        //Hash del archivo en IPFS
     string transactionHash; //Hash de la transacción que lo subió a IPFS
   }
 
   //string[] hashes;
   File[] files;
-
-  function set(string memory newHash) public {
+/*
+  function set(string memory newHash) public
+  {
     File memory newFile = File('', '', 0, 0, msg.sender, 0, newHash, '');
 
     files.push(newFile);
   }
 
   function get(string memory oldHash) public view returns (string memory name, string memory ext, uint size, uint downloads,
-                                          address owner,  uint date, string memory IPFSHash, string memory transactionHash) {
+                                          address owner,  uint date, string memory IPFSHash, string memory transactionHash)
+  {
     File memory file = File('', '', 0, 0, msg.sender, 0, '', '');
 
     for (uint i = 0; i < files.length; i++) {
@@ -52,26 +48,24 @@ contract FileStorage {
 
     return(file.name, file.ext, file.size, file.downloads, file.owner, file.date, file.IPFSHash, file.transactionHash);
   }
-
+*/
   // Devuelve la información del archivo que se va a descargar
-  function download(string memory oldHash) public view returns (string memory name, string memory ext, uint size, uint downloads,
-                                          address owner,  uint date, string memory IPFSHash, string memory transactionHash) {
+  function upload(string memory date, string memory IPFSHash, string memory transactionHash) public
   {
-      require(fileId >= 0 && fileId < files.length, "Error en el índice al acceder a los archivos");
-      files[fileId].downloads++;
-      return files[fileId];
+    files.push(File(msg.sender, date, IPFSHash, transactionHash));
   }
 
   // Devuelve la información del archivo que se va a descargar
-  function upload(string memory name, string memory ext, uint size, uint downloads,
-    address owner,  uint date, string memory IPFSHash, string memory transactionHash) public
+  function download(string memory fileHash) public view returns
+    (address owner, string memory date, string memory IPFSHash, string memory transactionHash)
   {
-    //File memory newfile = File(name, ext, size, downloads, owner/*msg.sender*/, date, IPFSHash, transactionHash);
+    File memory file = File(msg.sender, '', '', '');
 
-    files.push(File(name, ext, size, downloads, owner, date, IPFSHash, transactionHash)); //En vez de owner, msg.sender
+    for (uint i = 0; i < files.length; i++) {
+      if(keccak256(abi.encodePacked((files[i].IPFSHash))) == keccak256(abi.encodePacked((fileHash)))) file = files[i];
+    }
 
-    //File newFile = new File(name, ext, size, 0, msg.sender, now);
-    //files.push(newFile);
+    return(file.owner, file.date, file.IPFSHash, file.transactionHash);
   }
 }
 

@@ -99,22 +99,30 @@ class App extends Component {
           crossorigin="anonymous"
         ></link>
         <header className="App-header">
-          <h1> Trabajo SSI - IPFS Dapp</h1>
+          <div class="wrapper">
+            <h1> Trabajo SSI - IPFS Dapp</h1>
+            <ul class="bg-bubbles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
         </header>
         <hr />
         <h3> Choose file to send to IPFS </h3>
 
         <form onSubmit={this.onSubmit}>
           <div class="input-group mb-3">
-            <input
-              class="form-control"
-              type="file"
-              onChange={this.captureFile}
-            />
-            <button type="submit" class="btn btn-info">
-              {" "}
-              Send it{" "}
-            </button>
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <input class="form-control" type="file" onChange={this.captureFile} />
+            <button type="submit" class="btn btn-info"> {" "} Send it {" "} </button>
           </div>
         </form>
         <hr />
@@ -127,7 +135,7 @@ class App extends Component {
           </thead>
           <tbody>
             <tr>
-              <td>Name and extension</td>
+              <td>Name and Extension</td>
               <td>{this.state.nameExt}</td>
             </tr>
             <tr>
@@ -135,11 +143,11 @@ class App extends Component {
               <td>{this.state.size}</td>
             </tr>
             <tr>
-              <td>Date</td>
+              <td>Date and Time</td>
               <td>{this.state.date}</td>
             </tr>
             <tr>
-              <td>IPFS Hash # stored on Eth Contract</td>
+              <td>IPFS File Hash</td>
               <td>{this.state.ipfsHash}</td>
             </tr>
             <tr>
@@ -147,7 +155,7 @@ class App extends Component {
               <td>{this.state.ethAddress}</td>
             </tr>
             <tr>
-              <td>Tx Hash # </td>
+              <td>Transaction Hash</td>
               <td>{this.state.transactionHash}</td>
             </tr>
           </tbody>
