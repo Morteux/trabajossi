@@ -67,6 +67,19 @@ contract FileSignature {
 
     return(file.owner, file.date, file.IPFSHash, file.transactionHash);
   }
+
+  // Devuelve la información del archivo que se va a descargar
+  function getFiles() public view returns
+    (address[] memory owner, string[] memory date, string[] memory IPFSHash, string[] memory transactionHash)
+  {
+    File memory file = File(msg.sender, '', '', '');
+
+    for (uint i = 0; i < files.length; i++) {
+      if(keccak256(abi.encodePacked((files[i].IPFSHash))) == keccak256(abi.encodePacked((fileHash)))) file = files[i];
+    }
+
+    return(file.owner, file.date, file.IPFSHash, file.transactionHash);
+  }
 }
 
 /*

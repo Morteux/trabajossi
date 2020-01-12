@@ -94,7 +94,14 @@ class App extends Component {
 */
 
   ///////////////////////////////////////////////////////////////////
-
+/*
+  var fruits = ["apple", "orange", "cherry"];
+  fruits.forEach(myFunction);
+  
+  function myFunction(item, index) {
+    document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
+  }
+*/
   render() {
     return (
       <div className="">
@@ -113,7 +120,7 @@ class App extends Component {
         <form onSubmit={this.onSubmit}>
         <div class="input-group mb-3">
           <input class="form-control " type="file" onChange={this.captureFile} />
-          <button type="submit"class="btn btn-info"> Send it </button>
+          <button type="submit"class="btn btn-info"> Upload </button>
         </div>
         </form>
         </div>

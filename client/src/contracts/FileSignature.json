@@ -3068,12 +3068,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x3D6D0E472c18a36686EB41dbb7E53eFB52175a2b",
-      "transactionHash": "0x01ee8fd1ed3b20c7f0145b568ab4c003bab13f18cb9232f4598187bf7a6a4e12"
+      "address": "0x0C95646167c8f1701138e3E1b80d1B7EE465e016",
+      "transactionHash": "0xeef20a9207c7d9bd6d5bee850bf2bbe2198f12127f79e5b2f67c93eab8d151d8"
     }
   },
   "schemaVersion": "3.0.19",
-  "updatedAt": "2020-01-11T20:58:09.700Z",
+  "updatedAt": "2020-01-12T17:11:22.169Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
