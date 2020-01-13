@@ -10,6 +10,7 @@ class App extends Component {
     size: "",
     date: "",
     ipfsHash: null,
+    ipfsLink: "https://ipfs.io/ipfs/",
     buffer: "",
     transactionHash: "",
     gasUsed: "",
@@ -42,14 +43,22 @@ class App extends Component {
 
   onSubmit = async event => {
     event.preventDefault();
-    console.log("web3 value is ", web3.eth.getAccounts());
+
+    await web3.eth.enable;
+
+    console.log("web3 value is ", window.web3.eth.getAccounts());
+
     const accounts = await web3.eth.getAccounts();
+    //const accounts = ["0xc1663a36Ef30caDABD83aa66FBdD3b68E75cF590"];
+
     console.log("Sending from Metamask account: ", accounts[0]);
     const ethAddress = await fileSignatureContract.options.address;
     this.setState({ ethAddress });
     await ipfs.add(this.state.buffer, (err, ipfsHash) => {
       console.log(err, ipfsHash);
       this.setState({ ipfsHash: ipfsHash[0].hash });
+      const ipfsLink = this.state.ipfsLink.concat(ipfsHash[0].hash);
+      this.setState({ ipfsLink });
       fileSignatureContract.methods
         .upload(
           String(new Date()),
@@ -68,40 +77,6 @@ class App extends Component {
     });
   };
 
-  ///////////////////////////////////////////////////////////////////
-  /*
-  sendHash = event => {
-    event.stopPropagation();
-    event.preventDefault();
-
-    const IPFSHash = document.getElementById("hash");
-
-    var file = ipfs.get(IPFSHash);
-
-    //reader.readAsArrayBuffer(file);
-    //reader.onloadend = () => this.convertToBuffer(reader);
-  };
-*/
-  /*
-  const fileHash = 'you hash of the file you want to get'
-
-  ipfs.files.get(fileHash, function (err, files) {
-      files.forEach((file) => {
-          console.log(file.path)
-          console.log("File content >> ",file.content.toString('utf8'))
-      })
-  })
-*/
-
-  ///////////////////////////////////////////////////////////////////
-/*
-  var fruits = ["apple", "orange", "cherry"];
-  fruits.forEach(myFunction);
-  
-  function myFunction(item, index) {
-    document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
-  }
-*/
   render() {
     return (
       <div className="">
@@ -109,7 +84,7 @@ class App extends Component {
         
         </link>
         <header className="App-header">
-          <h1> Trabajo SSI - IPFS Dapp</h1>
+          <h1> <center>Trabajo SSI <br></br> Ethereum IPFS Dapp</center> </h1>
         </header>
         <hr />
         <div class="container my-2 text-center">
@@ -147,7 +122,7 @@ class App extends Component {
             </tr>
             <tr>
               <td><b>IPFS File Hash</b></td>
-              <td>{this.state.ipfsHash}</td>
+              <td><a href={this.state.ipfsLink}>{this.state.ipfsHash}</a></td>
             </tr>
             <tr>
               <td><b>Ethereum Contract Address</b></td>
