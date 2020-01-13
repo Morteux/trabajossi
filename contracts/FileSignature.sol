@@ -1,4 +1,5 @@
 pragma solidity >=0.4.21 <0.7.0;
+//pragma experimental ABIEncoderV2;
 
 contract FileSignature {
 
@@ -18,6 +19,9 @@ contract FileSignature {
     files.push(File(msg.sender, date, IPFSHash, transactionHash));
   }
 /*
+  //Funciones que necesitan una funcionalidad experimental (ABIEncoderV2),
+  //así que hemos decidido no usarlas. Más información en la documentación del proyecto
+
   // Devuelve la información del archivo que se va a descargar
   function download(string memory fileHash) public view returns
     (address owner, string memory date, string memory IPFSHash, string memory transactionHash)
@@ -33,15 +37,25 @@ contract FileSignature {
 
   // Devuelve la información del archivo que se va a descargar
   function getFiles() public view returns
-    (address[] memory owner, string[] memory date, string[] memory IPFSHash, string[] memory transactionHash)
+    (address[] memory, string[] memory, string[] memory, string[] memory)
   {
-    File memory file = File(msg.sender, '', '', '');
+    address[] memory owners;
+    string[] memory dates;
+    string[] memory IPFSHashes;
+    string[] memory transactionHashes;
 
     for (uint i = 0; i < files.length; i++) {
-      if(keccak256(abi.encodePacked((files[i].IPFSHash))) == keccak256(abi.encodePacked((fileHash)))) file = files[i];
+      //owners.push(files[i].owner);
+      //dates.push(files[i].date);
+      //IPFSHashes.push(files[i].IPFSHash);
+      //transactionHashes.push(files[i].transactionHash);
+      owners[i] = files[i].owner;
+      dates[i] = files[i].date;
+      IPFSHashes[i] = files[i].IPFSHash;
+      transactionHashes[i] = files[i].transactionHash;
     }
 
-    return(file.owner, file.date, file.IPFSHash, file.transactionHash);
+    return(owners, dates, IPFSHashes, transactionHashes);
   }
-  */
+*/
 }
