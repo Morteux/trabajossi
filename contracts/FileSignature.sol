@@ -45,10 +45,6 @@ contract FileSignature {
     string[] memory transactionHashes;
 
     for (uint i = 0; i < files.length; i++) {
-      //owners.push(files[i].owner);
-      //dates.push(files[i].date);
-      //IPFSHashes.push(files[i].IPFSHash);
-      //transactionHashes.push(files[i].transactionHash);
       owners[i] = files[i].owner;
       dates[i] = files[i].date;
       IPFSHashes[i] = files[i].IPFSHash;
