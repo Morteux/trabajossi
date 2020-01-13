@@ -43,14 +43,9 @@ class App extends Component {
 
   onSubmit = async event => {
     event.preventDefault();
-
     await web3.eth.enable;
-
     console.log("web3 value is ", window.web3.eth.getAccounts());
-
     const accounts = await web3.eth.getAccounts();
-    //const accounts = ["0xc1663a36Ef30caDABD83aa66FBdD3b68E75cF590"];
-
     console.log("Sending from Metamask account: ", accounts[0]);
     const ethAddress = await fileSignatureContract.options.address;
     this.setState({ ethAddress });
