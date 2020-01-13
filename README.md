@@ -28,19 +28,17 @@
 ##### 4.1. Requisitos previos
  - Instalar Truffle en el [punto 2](https://github.com/Morteux/trabajossi/blob/master/README.md#2-instalar-truffle).
  
-##### 4.2. Para instalar Truffle
+##### 4.2. Para instalar IPFS
  - Abrir una consola de comandos como administrador (El prompt debe quedar así `C:\WINDOWS\system32>`).
  - Ejecutar el comando `choco install ipfs-desktop`.
  - Ejecutar IPFS Desktop por primera vez y darle permiso de acceso al firewall de Windows.
 
-##### 4.3. Para instalar Truffle (alternativa)
- - `npm install ipfs` o `npm install ipfs-http-client` (falta por probar)
-
-### 5. Instalar [ReactJS](https://es.reactjs.org/)
- - (?)
+##### 4.3. Para instalar IPFS (alternativa)
+ - Ejecutar el comando `npm install ipfs`
 
 ## Pasos para poner en funcionamiento la aplicación en modo desarrollador
 
+ Previo a todos los pasos, es necesesario clonar este repositorio en la carpeta que se desee. Posteriormente proceder con:
  - Abrir Ganache:
     - Seleccionar *Quickstart*.
  - Abrir MetaMask:
